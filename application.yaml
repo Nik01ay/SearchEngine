@@ -1,0 +1,35 @@
+indexing-settings:
+  sites:
+    - url: https://quotes.toscrape.com
+      name: Quotes to Scrape
+    - url: https://starper55plys.ru
+      name: Блог Старого Перца
+    - url: https://konstruktorysajtov.com
+      name: Лучшие платформы для сайтов
+    - url: https://jsoup.org
+      name: jsoup Java HTML parser
+    - url: https://lenta.ru
+      name: Lenta.ru
+#    - url: https://www.business-gazeta.ru
+#      name: business gazeta
+#    - url: https://a24.press
+#      name: Все новости Астрахани
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: user
+    password: pass
+    url: jdbc:mysql://localhost:3306/search_engine?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+
+logging.level.root: INFO
